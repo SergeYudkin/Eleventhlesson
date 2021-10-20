@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
 
         Button alertDialogListMulti = findViewById(R.id.alertDialogListMulti);
         alertDialogListMulti.setOnClickListener(clickListenerDialogListMulti);
+
+        Button alertDialogCustom = findViewById(R.id.alertDialogCustom);
+        alertDialogCustom.setOnClickListener(clickListenerDialogCustom);
 
     }
 
@@ -122,6 +126,27 @@ public class MainActivity extends AppCompatActivity {
             dialog.show();
         }
     };
+
+    private final View.OnClickListener clickListenerDialogCustom = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            View frameLayout = getLayoutInflater().inflate(R.layout.dialog_custom,null);
+            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+            builder.setTitle(R.string.exclamation)
+                    .setView(frameLayout)
+                    .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int i) {
+                            EditText editText = frameLayout.findViewById(R.id.editText);
+                        }
+                    });
+
+            AlertDialog dialog = builder.create();
+            dialog.show();
+        }
+    };
+
+
 
 
 
