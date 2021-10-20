@@ -54,6 +54,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button fragmentBottomDialog = findViewById(R.id.fragmentBottomDialog );
+        fragmentBottomDialog .setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                BottomDialogFragment bottomDialogFragment = new BottomDialogFragment();
+                bottomDialogFragment.setOnDialogListener(onDialogListener);
+                bottomDialogFragment.show(getSupportFragmentManager(),"TAG");
+
+            }
+        });
+
     }
 
 
@@ -151,6 +162,19 @@ public class MainActivity extends AppCompatActivity {
 
             android.app.AlertDialog dialog = builder.create();
             dialog.show();
+        }
+    };
+
+    private final OnDialogListener onDialogListener = new OnDialogListener() {
+
+        @Override
+        public void pressYes() {
+
+        }
+
+        @Override
+        public void pressNo() {
+
         }
     };
 

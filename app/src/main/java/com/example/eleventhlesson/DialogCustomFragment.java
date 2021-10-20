@@ -26,13 +26,14 @@ public class DialogCustomFragment extends DialogFragment {
         View view = getLayoutInflater().inflate(R.layout.fragment_dialog_custom, container, false);
        initView(view);
         initListener();
+        setCancelable(false);  //  Диалог не закрывается до нажатия кнопки
         return view;
     }
 
     private void initListener(){
     button.setOnClickListener(new View.OnClickListener() {
         @Override
-        public void onClick(View v) {
+        public void onClick(View view) {
 
             String answer = editText.getText().toString();
             ((MainActivity) requireActivity()).onResultDialogFragment(answer);
