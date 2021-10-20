@@ -2,6 +2,7 @@ package com.example.eleventhlesson;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.DialogCompat;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -34,6 +35,32 @@ public class MainActivity extends AppCompatActivity {
 
         Button alertDialogCustom = findViewById(R.id.alertDialogCustom);
         alertDialogCustom.setOnClickListener(clickListenerDialogCustom);
+
+        Button fragmentDialogBuilder = findViewById(R.id.fragmentDialogBuilder);
+        fragmentDialogBuilder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DialogBuilderFragment dialogBuilderFragment = new DialogBuilderFragment();
+                dialogBuilderFragment.show(getSupportFragmentManager(), "TAG");
+            }
+        });
+
+        Button fragmentCustomBuilder = findViewById(R.id.fragmentCustomBuilder);
+        fragmentCustomBuilder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DialogCustomFragment dialog = new DialogCustomFragment();
+                dialog.show(getSupportFragmentManager(), "TEG");
+            }
+        });
+
+    }
+
+
+
+
+
+    public void onResultDialogFragment(String answer){
 
     }
 

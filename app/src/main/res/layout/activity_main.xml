@@ -4,44 +4,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
     <Button
+        android:id="@+id/alertDialog1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/alert_dialog_1"
-        android:id="@+id/alertDialog1"/>
+        android:text="@string/alert_dialog_1" />
 
     <Button
+        android:id="@+id/alertDialog3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/alert_dialog_3"
-        android:id="@+id/alertDialog3"/>
+        android:text="@string/alert_dialog_3" />
 
     <Button
+        android:id="@+id/alertDialogList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/alert_dialog_list"
-        android:id="@+id/alertDialogList"/>
+        android:text="@string/alert_dialog_list" />
 
     <Button
+        android:id="@+id/alertDialogListSingle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/alert_dialog_list_single"
-        android:id="@+id/alertDialogListSingle"/>
+        android:text="@string/alert_dialog_list_single" />
 
     <Button
+        android:id="@+id/alertDialogListMulti"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/alert_dialog_list_multi"
-        android:id="@+id/alertDialogListMulti"/>
+        android:text="@string/alert_dialog_list_multi" />
 
     <Button
+        android:id="@+id/alertDialogCustom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/alert_dialog_custom_form"
-        android:id="@+id/alertDialogCustom"/>
+        android:text="@string/alert_dialog_custom_form" />
+
+    <Button
+        android:id="@+id/fragmentDialogBuilder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dialog_builder" />
+
+    <Button
+        android:id="@+id/fragmentCustomBuilder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dialog_custom" />
 
 
 </LinearLayout>
