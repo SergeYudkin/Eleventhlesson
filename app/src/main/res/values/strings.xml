@@ -8,12 +8,12 @@
     <string name="alert_dialog_custom_form">Alert Dialog с кастомной формой</string>
 
     <string name="exclamation">Важное сообщение</string>
-    <string name="press_button">Нажмите кнопку!</string>
+    <string name="message">Нажмите кнопку!</string>
     <string name="button">Кнопка</string>
 
     <string name="yes">Да</string>
     <string name="no">Нет</string>
-    <string name="dunno">Не знаю</string>
+    <string name="neutral">Не знаю</string>
 
     <string name="dialog_builder">Диалог с билдером</string>
     <string name="dialog_custom">Кастомный диалог</string>
